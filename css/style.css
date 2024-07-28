@@ -1,0 +1,574 @@
+/* CSS for Apex Technologies Website
+   Author: [Apex Group]
+   Purpose: Provide styling for the entire website, including global styles, header, navigation, sections, and footer. This CSS file is structured to separate global styles, page-specific styles, and responsive layout adjustments. */
+
+/* ---------------------------
+   Global Styles
+----------------------------*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Sets the background color of the body to white for consistency */
+}
+
+header {
+  display: flex;
+  align-items: flex-end; /* Aligns header items at the bottom, useful for vertical alignment */
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #6a0dad; /* Header background color */
+  color: #ffffff; /* Header text color */
+}
+
+header .hero-image img {
+  height: 150px; /* Fixed height for logo ensures uniform size */
+  width: auto; /* Auto width to maintain aspect ratio */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 20px; /* Add margin between navigation links */
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px; /* Add padding to make the links clickable */
+  border-radius: 5px;
+  background-color: #49237f;
+  transition: background-color 0.3s, transform 0.3s; /* Add transition for smoother hover effect */
+  display: inline-block; /* Add display property */
+}
+
+nav ul li a:hover {
+  background-color: #2e1550; /* Darker background color on hover */
+  transform: translateY(-2px); /* Move the element up slightly on hover */
+}
+
+footer {
+  background-color: #6a0dad; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 10px 0;
+  text-align: center;
+}
+
+h1 {
+  text-align: center; /* Centers the heading */
+}
+/* ---------------------------
+   Page Specific Styles
+----------------------------*/
+
+/* Index Page */
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.feature {
+  flex: 1;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(106, 13, 173, 0.8); /* Transparent purple background */
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s; /* Add transition for smoother hover effect */
+}
+
+.feature:hover {
+  background-color: rgba(73, 35, 127, 1);
+  transform: translateY(-5px); /* Move the element up slightly on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.feature h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.feature p {
+  color: #ffffff;
+  text-align: center;
+}
+
+.feature + .feature {
+  margin-left: 20px; /* Add space between text blocks */
+}
+
+.bordered-paragraph {
+  border-top: 2px solid #cccccc; /* Top border color */
+  border-bottom: 2px solid #cccccc; /* Bottom border color */
+  padding: 20px; /* Add padding for better spacing */
+  transition: border-color 0.3s ease; /* Add transition for hover effect */
+  text-align: center;
+}
+
+.bordered-paragraph:hover {
+  border-color: darkmagenta; /* Change border color on hover */
+}
+
+.history strong a {
+  color: black;
+  text-decoration: none;
+}
+
+.history strong a:hover {
+  color: blue; /* Change color on hover */
+}
+
+#video-link {
+  background-color: #512da8; /* Darker purple for a striking look */
+  color: #ffffff; /* White text for high contrast */
+  padding: 15px 20px; /* Adequate padding for better text visibility */
+  margin: 0 auto; /* Vertical margin for separation, no horizontal margin */
+  text-align: center;
+  border-radius: 0; /* No border-radius for a full-width block-style look */
+  width: 70%; /* Ensures it spans the full width of its container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 10px;
+}
+
+#video-link p {
+  font-size: 16px; /* Slightly larger font for better readability */
+  margin-bottom: 10px; /* Space before the link */
+}
+
+#video-link a {
+  font-size: 16px;
+  color: #ffd700; /* Gold color for the link to pop against the dark background */
+  text-decoration: none; /* No underline for a cleaner look */
+  transition: color 0.3s ease; /* Smooth transition for interactive feedback */
+}
+
+#video-link a:hover {
+  color: #cabf45; /* Darker shade of gold on hover for visual interest */
+}
+
+/* Jobs Page */
+#container,
+#second {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#container aside,
+#second aside {
+  float: right;
+  width: 25vw;
+  border: 2px solid #6a0dad;
+  flex: 1;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(106, 13, 173, 0.8);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 1s ease forwards;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#container aside:hover,
+#second aside:hover {
+  background-color: rgba(73, 35, 127, 1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#container aside h2,
+#second aside h2,
+#container aside p,
+#second aside p {
+  color: #ffffff;
+  text-align: center;
+}
+#h1 {
+  font: bold 28px/1.5 "Helvetica Neue", Arial, sans-serif;
+  color: #4a148c;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+#container aside + aside,
+#second aside + aside {
+  margin-left: 20px; /* Add space between text blocks */
+}
+
+#ben {
+  text-align: left;
+}
+
+#benefits {
+  padding: 20px;
+  background-color: #4b0082; /* Darker purple background */
+  color: #ffffff;
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px;
+  animation: listFadeIn 2s ease forwards;
+}
+
+#benefits li {
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Hover effect on the parent container to start animation */
+#benefits:hover li {
+  animation: listFadeIn 2s ease forwards;
+}
+
+/* Apply Page */
+
+#apply-h1 {
+  font: bold 20px/1.2 "Helvetica Neue", Arial, sans-serif;
+  color: #4a148c;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer; /* Suggests interactivity */
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#apply-h1:hover {
+  color: #672197; /* Darker color on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Enhanced shadow for depth */
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+form {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-color: #49237f;
+}
+
+form fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+form legend {
+  padding: 0 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  background-color: #6f42c1;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #5a378c;
+}
+
+/* about.html */
+
+/* Slide-in animation for specific elements */
+.slide {
+  opacity: 0;
+  animation: slideInLeft 1s forwards;
+  animation-delay: 0.5s;
+}
+
+/* Hover effect for images */
+.hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+.group-info {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.group-info dl {
+  padding: 0;
+  margin: 0;
+}
+
+.group-info dt,
+.group-info dd {
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+}
+
+.group-info dt {
+  text-align: right;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.group-info dd {
+  text-align: left;
+  padding-left: 10px;
+  margin-left: -4px;
+}
+
+/* Clearfix to ensure that the dl container encompasses all floated dt/dd pairs */
+.group-info:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Unified section for group image and timetable */
+.image-timetable-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.image-container,
+.timetable-container {
+  flex-basis: 48%;
+  text-align: center;
+}
+
+/* Styles for the photo within figure */
+.image-container figure {
+  float: right;
+  margin-right: 100px;
+}
+
+.image-container img {
+  border: 3px solid #333; /* Shorthand border property */
+}
+
+.member-image {
+  width: 250px !important;
+  height: auto;
+}
+
+#group-image {
+  width: 350px !important;
+  height: auto;
+}
+
+/* Table styling adjustments */
+.timetable-container table {
+  margin-left: 20px;
+  border-collapse: collapse;
+}
+
+.timetable-container th,
+.timetable-container td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.timetable-container th {
+  font-weight: bold;
+  background-color: #6f42c1;
+  color: #fff;
+}
+
+a[href^="mailto:"] {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Group Member Profiles */
+.group-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Ensuring rows and columns align straight under each other */
+.member-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  width: 100%;
+}
+
+/* Individual member and group info columns */
+.member-column,
+.group-info-column {
+  flex: 1 1 300px; /* Allows flexibility but maintains a base width */
+  padding: 20px;
+  margin: 10px; /* Adjust spacing between columns */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns content centrally for each member/group info */
+}
+
+.contact-us {
+  text-align: center;
+  padding: 20px;
+  margin: 40px auto;
+  background-color: #f0f8ff; /* Light sky blue background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-us h2 {
+  color: #6a0dad;
+}
+
+.contact-us p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-us a {
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: bold; /* Makes the email address stand out */
+}
+
+.contact-us a:hover {
+  text-decoration: underline;
+}
+
+/* Enhancenments Page */
+
+#enhance {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* ---------------------------
+   Animations
+----------------------------*/
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes listFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------------------------
+   Responsive Layout
+----------------------------*/
+
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens to improve usability and appearance on mobile devices */
+
+  .container,
+  header,
+  footer,
+  nav ul li,
+  aside {
+    width: 100%; /* Full width for a stack layout on small screens */
+  }
+
+  header,
+  footer {
+    padding: 10px 0; /* Adjust padding for a tighter layout */
+  }
+
+  nav ul li {
+    display: block; /* Stack navigation links vertically */
+    margin: 10px 0; /* Add space between stacked links */
+  }
+
+  aside {
+    width: 100%; /* Asides take full width to utilize space efficiently */
+    margin-top: 10px; /* Ensure spacing is consistent */
+    margin-bottom: 20px; /* Extra spacing at the bottom for separation */
+  }
+}
